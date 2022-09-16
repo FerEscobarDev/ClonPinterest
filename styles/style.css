@@ -6,14 +6,15 @@ body{
 }
 
 .navbar{
+    box-sizing: border-box;
     position: fixed;
     background: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 50px;
+    height: 80px;
     width: 100%;
-    padding: 10px 0;
+    padding: 15px 15px;
 }
 
 .logo{
@@ -29,18 +30,20 @@ body{
     background-color: rgb(235, 235, 235);
 }
 
-.logo > img{
-    height: 24px;
-    width: 24px;
+.logo-svg{
+    fill: #c00;
+}
+
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 .content1-nav button{
-    border: none;
-    background: none;
     font-size: 15px;
     font-weight: bolder;
-    padding: 18px;
-    cursor: pointer;
+    padding: 16px 18px;
 }
 
 .btn-select{
@@ -60,16 +63,18 @@ body{
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    flex-grow: 3;
+    flex-grow: 1;
     background-color: rgb(230, 228, 228);
     border-radius: 50px;
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 .finder{
     border: none;
-    width: 90%;
+    width: 95%;    
+    border-radius: 50px;
     background-color: rgb(230, 228, 228);
     height: 50px;
     margin-left: 5px;
@@ -80,11 +85,14 @@ body{
 }
 
 .finder:focus{
-    width: 100%;
     border: 5px solid rgb(61, 188, 226);
     border-radius: 50px;
     outline: none;
     margin: 0;
+}
+
+.lupa{
+    fill: rgb(128, 127, 127);;
 }
 
 .finder:focus ~ label{
@@ -104,8 +112,87 @@ body{
     align-items: center;
 }
 
+.content2-nav svg{
+    fill: rgb(128, 127, 127);;
+}
+
+.btn-notifications , .btn-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    height: 50px;
+    width: 50px;
+}
+
+.btn-notifications{
+    margin-left: 10px;
+}
+
+.btn-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 24px;
+    width: 24px;
+}
+
 .img-profile{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.profile-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+}
+
+.profile-circle:hover, .btn-notifications:hover, .btn-message:hover, .btn-arrow:hover{
+    border-radius: 50px;
+    background-color: rgb(235, 235, 235);
+}
+
+.profile-btn{
+    height: 24px;
+    width: 24px;
+    background-color: rgba(194, 38, 194, 0.733);
+    color: white;
+    border-radius: 50px;
+}
+
+.container-images{
+    padding-top: 80px;
+    columns: 10 236px;
+    column-gap: 3%;
+    padding-left: 1rem;
+}
+
+.card-image{
+    z-index: -2;
+    position: relative;
+    width: 240px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-block-end: 40px;
+}
+
+/* .card-image:nth-child(2n){
+    height: 220px;
+} */
+
+.card-filter{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 8%;
+    position: absolute;
+}
+
+.card-image >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

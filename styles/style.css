@@ -166,22 +166,31 @@ button{
 .container-images{
     padding-top: 80px;
     columns: 10 236px;
-    column-gap: 3%;
-    padding-left: 1rem;
+    column-gap: 5px;
 }
 
 .card-image{
     z-index: -2;
     position: relative;
-    width: 240px;
+    width: 236px;
     overflow: hidden;
     border-radius: 20px;
+    margin-inline: auto;
     margin-block-end: 40px;
+    cursor: zoom-in;
 }
 
-/* .card-image:nth-child(2n){
-    height: 220px;
-} */
+.card-image:nth-child(2n){
+    height: 230px;
+}
+
+.card-image:nth-child(3n){
+    height: 180px;
+}
+
+.card-image:nth-child(4n){
+    height: 320px;
+}
 
 .card-filter{
     width: 100%;

@@ -52,6 +52,10 @@ button{
     color: white;
 }
 
+.btn-select > svg{
+    display: none;
+}
+
 .content1-nav{
     display: flex;
     justify-content: center;
@@ -166,7 +170,7 @@ button{
 .container-images{
     padding-top: 80px;
     columns: 10 236px;
-    column-gap: 5px;
+    column-gap: 8px;
 }
 
 .card-image{
@@ -180,7 +184,7 @@ button{
     cursor: zoom-in;
 }
 
-.card-image:nth-child(2n){
+/* .card-image:nth-child(2n){
     height: 230px;
 }
 
@@ -190,7 +194,7 @@ button{
 
 .card-image:nth-child(4n){
     height: 320px;
-}
+} */
 
 .card-filter{
     width: 100%;
@@ -204,4 +208,20 @@ button{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media screen and (max-width: 850px) {
+    .btn-img, .btn-today{
+        display: none;
+    }
+
+    .btn-select{
+        border-radius: 50px;
+        background: white !important;
+        color: black;
+    }
+
+    .btn-select > svg{
+        display: inline;
+    }
 }
